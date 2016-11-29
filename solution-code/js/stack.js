@@ -1,11 +1,8 @@
 var stackDataStructure = new StackDataStructure();
-$(document).ready(_initializeDataStructures);
+
+$(document).ready(_drawStack());
 $("#btn-add-stack").on("click", _addElementToStack);
 $("#btn-take-stack").on("click", _takeElementFromStack);
-
-function _initializeDataStructures() {
-  _drawStack();
-}
 
 function _drawStack () {
   var stack = $("#stack");
@@ -18,7 +15,7 @@ function _drawStack () {
     $(stack).prepend("<div class='element" + cssClass + "'>" + content + "</div>");
   }
 
-  _clearControls();
+  _clearStackControls();
 }
 
 function _addElementToStack () {
@@ -32,7 +29,7 @@ function _addElementToStack () {
     _showStackOverflow();
   }
 
-  _clearControls();
+  _clearStackControls();
   _enableTakeAction();
 }
 
@@ -46,7 +43,7 @@ function _takeElementFromStack () {
     _drawStack();
   }
 
-  _clearControls();
+  _clearStackControls();
   _enableAddAction();
 }
 
@@ -64,11 +61,12 @@ function _showStackOverflow () {
 }
 
 function _showStackUnderflow () {
+  $("#stack-element").html("");
   $("#btn-take-stack").prop("disabled", "disabled");
   $("#stack-underflow").show();
 }
 
-function _clearControls () {
+function _clearStackControls () {
   $("#txt-insert-stack").val("");
   $("#txt-insert-stack").focus();
 }

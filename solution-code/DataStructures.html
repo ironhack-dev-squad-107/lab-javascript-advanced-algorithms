@@ -46,14 +46,47 @@
         </div>
       </div>
 
-      <div id="stack" class="col-lg-6">
-        <h2>Queue</h2>
+      <div id="queue-container" class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-7">
+            <h2>Queue</h2>
+
+            <input id="txt-enqueue" type="text" class="form-control" placeholder="Enqueue the element...">
+
+            <button id="btn-enqueue" class="btn btn-primary">
+              ENQUEUE
+            </button>
+
+            <button id="btn-dequeue" class="btn btn-danger">
+              DEQUEUE
+            </button>
+          </div>
+
+          <div id="queue-element" class="col-lg-5">
+            <!-- Element dequeued -->
+          </div>
+
+          <div class="col-lg-12">
+            <div id="queue-overflow" class="bg-danger">
+              Queue Overflow
+            </div>
+
+            <section id="queue">
+              <!-- Current Stack -->
+            </section>
+
+            <div id="queue-underflow" class="bg-danger">
+              Queue Underflow
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <script src="src/StackDataStructure.js"></script>
   <script src="src/QueueDataStructure.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/stack.js"></script>
+  <script src="js/queue.js"></script>
 </body>
 </html>
