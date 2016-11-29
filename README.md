@@ -63,25 +63,75 @@ We have created a set of tests to guide you through the abstract data types impl
 
 ### Starter code
 
-Project with Jasmine tests
+Open in you browser the `SpecRunner.html` file to see the set of tests we have created:
+
+![](https://i.imgur.com/dQUAyYL.png)
+
+Go through this tests to build up your libraries with the specified functionality. Let's go step by step:
 
 ### First iteration
 
-- Create a stack
-- Pass all the tests
-- Create a visual layout to show its usage
+The first abstract data type we are going to build is the `Stack`. You have to create the requested methods in the `/src/StackDataStructure.js` file.
+
+Remember that `Stack` is a LIFO (Last-in First-out) structure. So you have to add the right methods to add elements to the structure, and it also should has the necessary methods to remove elements from it. When you take an element, it should be the last one we inserted.
+
+We should also be careful with Stack Overflow (yes, like the website), and Stack Underflow:
+
+- Stack Overflow occurs when we try to add an element into an stack that is already full.
+- Stack Underflow occurs when we try to get an element from an empty stack.
+
+So we will also need to have two methods, one to check if we can add new elements to the stack (to avoid the stack overflow), and another one to check if we can take an element from the stack (to avoid the stack underflow).
+
+If you follow the set of tests, you will get a solution with all the necessary implementations :)
+
+:::danger
+**You can't use the append or prepend jQuery methods to do this exercise. The goal is not to do the exercise fast, but to have a first approach with the Data Structures.**
+:::
 
 ### Second iteration
 
-- Create a queue
-- Pass all the tests
-- Create a visual layout to show its usage
+The second abstract data type we are going to build is the `Queue`. You have to create the requested methods in the `/src/QueueDataStructure.js` file.
 
-### Bonus iteration
+Remember that `Queue` is a FIFO (First-in First-out) structure. So you have to add the right methods to add elements to the structure, and it also should has the necessary methods to remove elements from it in the same order we added them.
 
-- Create a circular queue
-- Pass all the tests
-- Create a visual layout to show its usage
+We should also be careful with Queue Overflow, and Queue Underflow:
+
+- Queue Overflow occurs when we try to add an element into a queue that is already full.
+- Queue Underflow occurs when we try to get an element from an empty queue.
+
+So we will also need to have two methods, one to check if we can add new elements to the queue (it will avoid the queue overflow), and another one to check if we can remove an element from the queue (it will avoid the queue underflow).
+
+If you follow the set of tests, you will get a solution with all the necessary implementations :)
+
+:::danger
+**Again, you can't use the append or prepend jQuery methods to do this exercise. Remember that the goal is not to do the exercise fast, but to understand these Data Structures.**
+:::
+
+### Third iteration
+
+Once we have created all the functionality, let's create a visual representation to see how do stacks and queues work. You have to consider all the options we have coded!
+
+Here we purpose you an example about how we could represent the different steps of the stack structure.
+
+#### Initial layout
+
+![](https://i.imgur.com/H9aF8YH.png)
+
+#### Add an element
+
+![](https://i.imgur.com/b1ndy2j.png)
+
+#### Take an element
+
+![](https://i.imgur.com/mVklHXR.png)
+
+#### Stack Overflow
+
+![](https://i.imgur.com/oZnRXva.png)
+
+#### Stack Underflow
+
+![](https://i.imgur.com/AiGT158.png)
 
 ## Extra Resources
 
