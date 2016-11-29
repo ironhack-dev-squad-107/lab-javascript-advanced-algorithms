@@ -7,12 +7,12 @@ QueueDataStructure.prototype.isEmpty = function () {
   return this.queueControl.length === 0;
 };
 
-QueueDataStructure.prototype.canPush = function () {
+QueueDataStructure.prototype.canEnqueue = function () {
   return this.queueControl.length < this.MAX_SIZE;
 };
 
 QueueDataStructure.prototype.enqueue = function (element) {
-  if (!this.canPush()) {
+  if (!this.canEnqueue()) {
     return "Queue Overflow";
   }
 
