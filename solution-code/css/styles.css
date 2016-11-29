@@ -1,0 +1,43 @@
+#btn-add-stack,
+#btn-take-stack {
+  margin: 10px 0;
+  outline: 0;
+  width: 300px;
+}
+
+#btn-take-stack {
+  margin: 0 0 30px;
+}
+
+#txt-insert-stack {
+  outline: 0;
+  width: 300px;
+}
+
+#stack-overflow,
+#stack-underflow,
+#stack .element {
+  background: #EAEAEA;
+  border: 1px solid #EAEAEA;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+  height: 50px;
+  margin-bottom: 1px;
+  padding: 10px 0;
+  text-align: center;
+  width: 300px;
+}
+
+#stack-overflow,
+#stack-underflow {
+  background: #f2dede;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+  display: none;
+}
+
+#stack .element.full {
+  background: #43A3E6;
+  border: 1px solid #43A3E6;
+}
