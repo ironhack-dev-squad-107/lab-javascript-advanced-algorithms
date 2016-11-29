@@ -27,6 +27,7 @@ function _addElementToStack () {
 
   if (result === stackDataStructure.stackControl) {
     _drawStack();
+    _hideTakenElement();
   } else {
     _showStackOverflow();
   }
@@ -41,12 +42,20 @@ function _takeElementFromStack () {
   if (element === "Stack Underflow") {
     _showStackUnderflow();
   } else {
-    // show element
+    _showTakenElement(element);
     _drawStack();
   }
 
   _clearControls();
   _enableAddAction();
+}
+
+function _showTakenElement (element) {
+  $("#stack-element").html(element);
+}
+
+function _hideTakenElement (element) {
+  $("#stack-element").html("");
 }
 
 function _showStackOverflow () {

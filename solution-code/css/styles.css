@@ -41,3 +41,8 @@
   background: #43A3E6;
   border: 1px solid #43A3E6;
 }
+
+#stack-element {
+  font-size: 30px;
+  margin-top: 55px;
+}
