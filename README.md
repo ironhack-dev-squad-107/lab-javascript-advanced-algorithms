@@ -1,4 +1,4 @@
-![](https://i.imgur.com/1QgrNNw.png)
+![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
 # JS | Advanced Algorithms
 
@@ -8,13 +8,29 @@ A [data structure](https://en.wikipedia.org/wiki/Data_structure) is a particular
 
 In this exercise we will implement two different abstract data types that are very common: `stacks` and `queues`. Let's see what both data structures to understand how they work.
 
+## Submission
+
+Upon completion, run the following commands
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin master
+```
+Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
+
+In the Pull request name, add your name and last names separated by a dash "-"
+
+## Deliverables
+
+Create your Pull request with everything you need to run your game properly.
+
 ### Stacks
 
 An stack is a simple data structure that allows adding and removing elements in a particular order. Every time an element is added, it goes on the top of the stack. The only element that can be removed is the element that was at the top of the stack.
 
 This data structure is also called LIFO queue. LIFO stands for "last in, first out", meaning that the last element we put in the stack, is the first element that will go out.
 
-![](https://i.imgur.com/NcuoeUk.png)
+![Image](https://i.imgur.com/NcuoeUk.png)
 
 :::info
 Think about a stack as if it was a stack of books. You can put a book over the others, but you just can take the book on the top of the stack.
