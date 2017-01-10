@@ -8,6 +8,7 @@ In this exercise, you will be able to:
 
 - Use data structures to organize your application information
 - Learn how to model real-life situations and objects into proper data structures
+- Use tests to develop your solution
 
 
 ## Data Structures
