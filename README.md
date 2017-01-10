@@ -2,9 +2,17 @@
 
 # JS | Advanced Algorithms
 
+## Learning Goals
+
+In this exercise, you will be able to:
+
+- Use data structures to organize your application information
+- Learn how to model real-life situations and objects into proper data structures
+
+
 ## Data Structures
 
-A [data structure](https://en.wikipedia.org/wiki/Data_structure) is a particular way to organize your dataa in the computer so it can be used efficiently. They can implement one or more [abstract data types](https://en.wikipedia.org/wiki/Abstract_data_type), which specify the operations that can be performed over a data structure.
+A [data structure](https://en.wikipedia.org/wiki/Data_structure) is a particular way to organize your data in the computer so it can be used efficiently. One or more [abstract data types](https://en.wikipedia.org/wiki/Abstract_data_type) can be implemented and they specify the operations that can be performed over a data structure.
 
 In this exercise we will implement two different abstract data types that are very common: `stacks` and `queues`. Let's see what both data structures to understand how they work.
 
