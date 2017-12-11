@@ -1,82 +1,82 @@
 var stackDataStructure = new StackDataStructure();
 
-$(document).ready(_drawStack());
-$("#btn-add-stack").on("click", _addElementToStack);
-$("#btn-take-stack").on("click", _takeElementFromStack);
+$(document).ready(drawStack());
+$('#btn-add-stack').on('click', addElementToStack);
+$('#btn-take-stack').on('click', takeElementFromStack);
 
-function _drawStack () {
-  var stack = $("#stack");
-  stack.html("");
+function drawStack() {
+  var stack = $('#stack');
+  stack.html('');
 
-  for (var i = 0; i < stackDataStructure.MAX_SIZE; i++) {
-    var content = stackDataStructure.stackControl[i] || "";
-    var cssClass = content ? " full" : "";
+  for (var i = 0; i < stackDataStructure.MAXSIZE; i++) {
+    var content = stackDataStructure.stackControl[i] || '';
+    var cssClass = content ? ' full' : '';
 
-    $(stack).prepend("<div class='element" + cssClass + "'>" + content + "</div>");
+    $(stack).prepend('<div class="element' + cssClass + '">' + content + '</div>');
   }
 
-  _clearStackControls();
+  clearStackControls();
 }
 
-function _addElementToStack () {
-  var element = $("#txt-insert-stack").val();
+function addElementToStack() {
+  var element = $('#txt-insert-stack').val();
   var result = stackDataStructure.push(element);
 
   if (result === stackDataStructure.stackControl) {
-    _drawStack();
-    _hideTakenElement();
+    drawStack();
+    hideTakenElement();
   } else {
-    _showStackOverflow();
+    showStackOverflow();
   }
 
-  _clearStackControls();
-  _enableTakeAction();
+  clearStackControls();
+  enableTakeAction();
 }
 
-function _takeElementFromStack () {
+function takeElementFromStack() {
   var element = stackDataStructure.pop();
 
-  if (element === "Stack Underflow") {
-    _showStackUnderflow();
+  if (element === 'Stack Underflow') {
+    showStackUnderflow();
   } else {
-    _showTakenElement(element);
-    _drawStack();
+    showTakenElement(element);
+    drawStack();
   }
 
-  _clearStackControls();
-  _enableAddAction();
+  clearStackControls();
+  enableAddAction();
 }
 
-function _showTakenElement (element) {
-  $("#stack-element").html(element);
+function showTakenElement(element) {
+  $('#stack-element').html(element);
 }
 
-function _hideTakenElement (element) {
-  $("#stack-element").html("");
+function hideTakenElement(element) {
+  $('#stack-element').html('');
 }
 
-function _showStackOverflow () {
-  $("#btn-add-stack").prop("disabled", "disabled");
-  $("#stack-overflow").show();
+function showStackOverflow() {
+  $('#btn-add-stack').prop('disabled', 'disabled');
+  $('#stack-overflow').show();
 }
 
-function _showStackUnderflow () {
-  $("#stack-element").html("");
-  $("#btn-take-stack").prop("disabled", "disabled");
-  $("#stack-underflow").show();
+function showStackUnderflow() {
+  $('#stack-element').html('');
+  $('#btn-take-stack').prop('disabled', 'disabled');
+  $('#stack-underflow').show();
 }
 
-function _clearStackControls () {
-  $("#txt-insert-stack").val("");
-  $("#txt-insert-stack").focus();
+function clearStackControls() {
+  $('#txt-insert-stack').val('');
+  $('#txt-insert-stack').focus();
 }
 
-function _enableAddAction () {
-  $("#btn-add-stack").prop("disabled", "");
-  $("#stack-overflow").hide();
+function enableAddAction() {
+  $('#btn-add-stack').prop('disabled', '');
+  $('#stack-overflow').hide();
 }
 
-function _enableTakeAction () {
-  $("#btn-take-stack").prop("disabled", "");
-  $("#stack-underflow").hide();
+function enableTakeAction() {
+  $('#btn-take-stack').prop('disabled', '');
+  $('#stack-underflow').hide();
 }
