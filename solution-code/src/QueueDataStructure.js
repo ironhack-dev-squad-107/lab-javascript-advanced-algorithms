@@ -1,4 +1,4 @@
-function QueueDataStructure () {
+function QueueDataStructure() {
   this.queueControl = [];
   this.MAX_SIZE     = 8;
 }
@@ -13,7 +13,7 @@ QueueDataStructure.prototype.canEnqueue = function () {
 
 QueueDataStructure.prototype.enqueue = function (element) {
   if (!this.canEnqueue()) {
-    return "Queue Overflow";
+    return 'Queue Overflow';
   }
 
   this.queueControl.reverse().push(element);
@@ -22,7 +22,7 @@ QueueDataStructure.prototype.enqueue = function (element) {
 
 QueueDataStructure.prototype.dequeue = function (element) {
   if (this.isEmpty()) {
-    return "Queue Underflow";
+    return 'Queue Underflow';
   }
 
   return this.queueControl.pop();

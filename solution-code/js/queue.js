@@ -1,82 +1,82 @@
 var queueDataStructure = new QueueDataStructure();
 
-$(document).ready(_drawQueue());
-$("#btn-enqueue").on("click", _enqueueElement);
-$("#btn-dequeue").on("click", _dequeueElement);
+$(document).ready(drawQueue());
+$('#btn-enqueue').on('click', enqueueElement);
+$('#btn-dequeue').on('click', dequeueElement);
 
-function _drawQueue () {
-  var queue = $("#queue");
-  queue.html("");
+function drawQueue() {
+  var queue = $('#queue');
+  queue.html('');
 
   for (var i = 0; i < queueDataStructure.MAX_SIZE; i++) {
-    var content = queueDataStructure.queueControl[i] || "";
-    var cssClass = content ? " full" : "";
+    var content = queueDataStructure.queueControl[i] || '';
+    var cssClass = content ? ' full' : '';
 
-    $(queue).append("<div class='element" + cssClass + "'>" + content + "</div>");
+    $(queue).append('<div class="element' + cssClass + '">' + content + '</div>');
   }
 
-  _clearQueueControls();
+  clearQueueControls();
 }
 
-function _enqueueElement () {
-  var element = $("#txt-enqueue").val();
+function enqueueElement() {
+  var element = $('#txt-enqueue').val();
   var result = queueDataStructure.enqueue(element);
 
   if (result === queueDataStructure.queueControl) {
-    _drawQueue();
-    _hideDequeuedElement();
+    drawQueue();
+    hideDequeuedElement();
   } else {
-    _showQueueOverflow();
+    showQueueOverflow();
   }
 
-  _clearQueueControls();
-  _enableDequeueAction();
+  clearQueueControls();
+  enableDequeueAction();
 }
 
-function _dequeueElement () {
+function dequeueElement() {
   var element = queueDataStructure.dequeue();
 
-  if (element === "Queue Underflow") {
-    _showQueueUnderflow();
+  if (element === 'Queue Underflow') {
+    showQueueUnderflow();
   } else {
-    _showEnqueuedElement(element);
-    _drawQueue();
+    showEnqueuedElement(element);
+    drawQueue();
   }
 
-  _clearQueueControls();
-  _enableEnqueueAction();
+  clearQueueControls();
+  enableEnqueueAction();
 }
 
-function _showEnqueuedElement (element) {
-  $("#queue-element").html(element);
+function showEnqueuedElement(element) {
+  $('#queue-element').html(element);
 }
 
-function _hideDequeuedElement (element) {
-  $("#queue-element").html("");
+function hideDequeuedElement(element) {
+  $('#queue-element').html('');
 }
 
-function _showQueueOverflow () {
-  $("#btn-enqueue").prop("disabled", "disabled");
-  $("#queue-overflow").show();
+function showQueueOverflow() {
+  $('#btn-enqueue').prop('disabled', 'disabled');
+  $('#queue-overflow').show();
 }
 
-function _showQueueUnderflow () {
-  $("#btn-dequeue").prop("disabled", "disabled");
-  $("#queue-underflow").show();
-  $("#queue-element").html("");
+function showQueueUnderflow() {
+  $('#btn-dequeue').prop('disabled', 'disabled');
+  $('#queue-underflow').show();
+  $('#queue-element').html('');
 }
 
-function _clearQueueControls () {
-  $("#txt-enqueue").val("");
-  $("#txt-enqueue").focus();
+function clearQueueControls() {
+  $('#txt-enqueue').val('');
+  $('#txt-enqueue').focus();
 }
 
-function _enableEnqueueAction () {
-  $("#btn-enqueue").prop("disabled", "");
-  $("#queue-overflow").hide();
+function enableEnqueueAction() {
+  $('#btn-enqueue').prop('disabled', '');
+  $('#queue-overflow').hide();
 }
 
-function _enableDequeueAction () {
-  $("#btn-dequeue").prop("disabled", "");
-  $("#queue-underflow").hide();
+function enableDequeueAction() {
+  $('#btn-dequeue').prop('disabled', '');
+  $('#queue-underflow').hide();
 }

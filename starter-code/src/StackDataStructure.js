@@ -1,2 +1,2 @@
-function StackDataStructure () {
+function StackDataStructure() {
 }
